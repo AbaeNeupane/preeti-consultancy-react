@@ -1,0 +1,109 @@
+#visa-services {
+  background: var(--cream);
+  padding: 120px 6%;
+}
+
+.visa-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 70px;
+}
+
+.light-label { color: var(--gold) !important; }
+.light-label::before { display: none; }
+
+.visa-header-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: -0.5rem;
+}
+
+.visa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.visa-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.visa-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--gold);
+  transition: height 0.3s ease;
+}
+
+.visa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(11,29,81,0.10);
+  border-color: rgba(201,146,42,0.3);
+}
+
+.visa-card:hover::before { height: 100%; }
+
+.visa-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.visa-code {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201,146,42,0.08);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.visa-flag { font-size: 1.4rem; }
+
+.visa-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.visa-desc {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.75;
+  flex: 1;
+  margin-bottom: 1.4rem;
+}
+
+.visa-cta {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+
+.visa-cta:hover { color: var(--gold); }
+
+@media (max-width: 900px) { .visa-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .visa-grid { grid-template-columns: 1fr; } }
