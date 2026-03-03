@@ -32,7 +32,7 @@ function Hero() {
           { num: '500+', label: 'Students Placed' },
           { num: '98%',  label: 'Visa Success Rate' },
           { num: '50+',  label: 'Partner Universities' },
-          { num: '8+',   label: 'Years Experience' },
+          { num: '7+',   label: 'Years Experience' },
         ].map((s) => (
           <div className="stat" key={s.label}>
             <div className="stat-num">{s.num}</div>
